@@ -13,43 +13,39 @@
   <script src="./index.js" type="module" defer></script>
 </head>
 <body>
-  <div class="container">
-    <div class="icon-star">
-      <img src="./assets/icon-star.svg" title="icono-estrella">
-    </div>
-    <h1>¿Cómo lo hicimos?</h1>
-    <div class="parragraph">      
-      <p>Por favor, haznos saber cómo lo hicimos con tu solicitud de soporte.</p>
-      <p>Todos los comentarios son bienvenidos para ayudarnos a mejorar nuestra oferta!</p>
-    </div>  
-    <div class="container-form">
-      <form>
+  <main>
+    <section class="container">
+      <div class="icon-star">
+        <img src="./assets/icon-star.svg" alt="Icono de estrella">
+      </div>
+      <h1 class="aligned">¿Cómo lo hicimos?</h1>
+      <div class="paragraph">
+        <p>Por favor, haznos saber cómo lo hicimos con tu solicitud de soporte.</p>
+        <p>Todos los comentarios son bienvenidos para ayudarnos a mejorar nuestra oferta.</p>
+      </div>
+      <div class="container-form">
         <div class="buttons-wrapper">
-          <button class="btn" type="button" data-target="section1">1</button>
-          <button class="btn" type="button" data-target="section2">2</button>
-          <button class="btn" type="button" data-target="section3">3</button>
-          <button class="btn" type="button" data-target="section4">4</button>
-          <button class="btn" type="button" data-target="section5">5</button>
+          <button class="btn" type="button" data-value="1">1</button>
+          <button class="btn" type="button" data-value="2">2</button>
+          <button class="btn" type="button" data-value="3">3</button>
+          <button class="btn" type="button" data-value="4">4</button>
+          <button class="btn" type="button" data-value="5">5</button>
         </div>
-        <div class="button-submit">
-          <button type="submit">ENVIAR</button>
-        </div>
-      </form>
-    </div>
-  </div>
+        <button class="submit-btn" type="button" disabled>ENVIAR</button>
+      </div>
+    </section>
 
-  <div class="container view hidden">
-    <div class="img-view">
-      <img src="./assets/illustration-thank-you.svg" alt="imagen-de-movil">
-    </div>
-    <div class="item-selected">
-      <p>Seleccionaste <span id="selected-number"></span> de 5</p>
-    </div>  
-    <h1>¡Gracias!</h1>
-    <div class="parragraph">      
-      <p>Agradecemos que te hayas tomado el tiempo de dar una calificación.</p>
-      <p>Si alguna vez necesitas más ayuda, no dudes en volver a ponerte en contacto con nosotros.</p>
-    </div>    
-  </div>
+    <section class="container thank-you hidden">
+      <div class="img-view">
+        <img src="./assets/illustration-thank-you.svg" alt="Imagen de un teléfono">
+      </div>
+      <p class="item-selected">Seleccionaste <span id="selected-number"></span> de 5</p>
+      <h2>¡Gracias!</h2>
+      <div class="paragraph">
+        <p>Agradecemos que te hayas tomado el tiempo de dar una calificación.</p>
+        <p>Si alguna vez necesitas más ayuda, no dudes en volver a ponerte en contacto con nosotros.</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

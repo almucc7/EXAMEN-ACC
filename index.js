@@ -1,26 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.btn');
-    const containerForm = document.querySelector('.container'); 
-    const containerView = document.querySelector('.container.view'); 
-    const selectedNumberElement = document.getElementById('selected-number'); 
-    const submitButton = document.querySelector('button[type="submit"]');
-    let selectedNumber = null; 
-   
-    buttons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-            selectedNumber = event.target.innerText; 
-            selectedNumberElement.innerHTML = selectedNumber; 
+    const submitButton = document.querySelector('.submit-btn');
+    const container = document.querySelector('.container');
+    const thankYouContainer = document.querySelector('.thank-you');
+    const selectedNumberElement = document.getElementById('selected-number');
+
+    let selectedNumber = null;
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
+            selectedNumber = button.dataset.value;
+            submitButton.disabled = false;
+            submitButton.classList.add('enabled');
         });
     });
 
-    submitButton.addEventListener('click', (event) => {
-        event.preventDefault(); 
-
-        if (selectedNumber !== null) {           
-            containerForm.classList.add('hidden');
-            containerView.classList.remove('hidden');
-        } else {           
-            alert('Por favor, selecciona una opción.');
+    submitButton.addEventListener('click', () => {
+        if (selectedNumber) {
+            selectedNumberElement.textContent = selectedNumber;
+            container.classList.add('hidden');
+            thankYouContainer.classList.remove('hidden');
         }
     });
 });

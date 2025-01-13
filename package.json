@@ -1,0 +1,16 @@
+{
+  "name": "examen-acc",
+  "version": "1.0.0",
+  "description": "Examen de la primera unidad.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Almudena Cantarero Cantarero",
+  "license": "ISC",
+  "prettier": {
+      "singleQuote": true
+  }
+}

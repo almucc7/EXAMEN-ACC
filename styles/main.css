@@ -25,13 +25,12 @@ body {
 }
 
 .container {
-    background: linear-gradient(to right, var(--color-dark-blue), hsl(213, 19%, 30%));
-    width: 50%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-    border-radius: 20px;
-    border: var(--color-light-grey) 1px solid;
+    background: linear-gradient(to top right, var(--color-very-dark-blue), hsl(213, 19%, 18%));
+    border-radius: 23px;
+    padding: 3rem 2rem;
+    width: 100%;
+    max-width: 375px;
+    text-align: left;
 }
 
 .icon-star {
@@ -113,7 +112,7 @@ h1 {
 }
 
 .submit-btn.enabled:hover {
-    background-color: hsl(25, 97%, 45%);
+    background-color: var(--color-orange);
 }
 
 
@@ -122,14 +121,13 @@ h1 {
 .hidden {
     display: none;
 }
-.item-selected{
-    background: linear-gradient(to left, var(--color-dark-blue), hsl(213, 19%, 30%));
-    padding: 0.5rem;
-    border-radius: 50px;
+
+.thank-you {
+    text-align: center;
+    background: linear-gradient(to top right, var(--color-very-dark-blue), hsl(213, 19%, 18%));
+    padding: 3rem 2rem;
+    border-radius: 23px;
 }
-
-
-
 
 .img-view {
     margin-bottom: 1.5rem;

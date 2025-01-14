@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const thankYouContainer = document.querySelector('.thank-you');
     const selectedNumberElement = document.getElementById('selected-number');
 
-    let selectedNumber = null;
+    let selectedNumber = 0;
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {

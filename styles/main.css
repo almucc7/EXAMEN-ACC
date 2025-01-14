@@ -50,8 +50,7 @@ body {
     height: 20px;
 }
 
-h1 {
-    font-size: 1.5rem;
+h1 {  
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -59,6 +58,7 @@ h1 {
 .paragraph {
     font-size: 1rem;
     color: var(--color-light-grey);
+    margin-top: 1.2rem;
     margin-bottom: 1rem;
     line-height: 1.6;
 }
@@ -81,11 +81,11 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.btn:hover {
-    background-color: var(--color-orange);
-    color: var(--color-dark-blue);
+    &:hover{
+        background-color: var(--color-orange);
+        color: var(--color-dark-blue);
+    }
 }
 
 .btn.selected {
@@ -111,9 +111,7 @@ h1 {
     opacity: 1;
 }
 
-.submit-btn.enabled:hover {
-    background-color: var(--color-orange);
-}
+
 
 
 /*SEGUNDO COMPONENTE*/
@@ -131,10 +129,6 @@ h1 {
 
 .img-view {
     margin-bottom: 1.5rem;
-}
-
-.paragraph{
-    margin-top: 1.2rem;
 }
 
 .item-selected {

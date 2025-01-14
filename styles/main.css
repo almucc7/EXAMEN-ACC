@@ -1,133 +1,151 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
-    /* Paleta de colores */
     --color-orange: hsl(25, 97%, 53%);
     --color-white: hsl(0, 0%, 100%);
     --color-light-grey: hsl(217, 12%, 63%);
     --color-dark-blue: hsl(213, 19%, 18%);
     --color-very-dark-blue: hsl(216, 12%, 8%);
-
-    /* Fuente */
-    --font-base: "Overpass", serif;
+    --font-family: 'Overpass', sans-serif;
 }
 
 body {
-    font-family: var(--font-base);
     background-color: var(--color-very-dark-blue);
-    margin: 0;
-    padding: 0;
+    color: var(--color-white);
+    font-family: var(--font-family);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 1rem;
 }
 
 .container {
     background: linear-gradient(to right, var(--color-dark-blue), hsl(213, 19%, 30%));
-    width: 35%;    
+    width: 50%;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     border-radius: 20px;
     border: var(--color-light-grey) 1px solid;
 }
 
-.icon-star img {
-    background-color: var(--color-dark-blue);
+.icon-star {
+    background: var(--color-dark-blue);
     border-radius: 50%;
-    padding: 20px;
+    padding: 15px;
+    margin-bottom: 1.5rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.parragraph {
-    color: var(--color-light-grey);
+.icon-star img {
+    width: 20px;
+    height: 20px;
 }
 
 h1 {
-    color: var(--color-white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
 }
 
-.container-form {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;  
-    width: 100%;
+.paragraph {
+    font-size: 1rem;
+    color: var(--color-light-grey);
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 .buttons-wrapper {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
 }
 
 .btn {
     background-color: var(--color-dark-blue);
     border: none;
-    color: var(--color-white);
-    height: 60px; 
-    width: 60px;  
-    border-radius: 50%; 
+    border-radius: 50%;
+    color: var(--color-light-grey);
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+    cursor: pointer;    
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;    
-    font-size: 1.2rem;
-
-    &:hover{
-        background-color: var(--color-white);
-        color: var(--color-very-dark-blue);
-    }
 }
 
-.button-submit {
-    width: 100%;
-    margin-top: 20px;
+.btn:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark-blue);
 }
 
-.button-submit button[type="submit"] {
+.btn.selected {
+    background-color: var(--color-white);
+    color: var(--color-dark-blue);
+}
+
+.submit-btn {
     background-color: var(--color-orange);
     border: none;
-    color: var(--color-white);
-    padding: 10px 0;
-    border-radius: 16px;
+    border-radius: 25px;
+    color: var(--color-dark-blue);
+    padding: 1.5rem 0;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: not-allowed;
+    opacity: 0.6;    
+}
+
+.submit-btn.enabled {
     cursor: pointer;
-    width: 100%;  
-    height: 60px;  
-    font-size: 1.2rem;
+    opacity: 1;
+}
+
+.submit-btn.enabled:hover {
+    background-color: hsl(25, 97%, 45%);
 }
 
 
-/*COMPONENTE 2*/
+/*SEGUNDO COMPONENTE*/
 
 .hidden {
-   display: none;
+    display: none;
 }
-
-.view {
-    text-align: center;
-}
-
 .item-selected{
     background: linear-gradient(to left, var(--color-dark-blue), hsl(213, 19%, 30%));
     padding: 0.5rem;
     border-radius: 50px;
-    color: var(--color-orange);
-    text-align: center;
-    font-size: 1.2rem;
 }
 
 
 
 
+.img-view {
+    margin-bottom: 1.5rem;
+}
 
+.paragraph{
+    margin-top: 1.2rem;
+}
 
-
-
-
-
-
-
-
-
+.item-selected {
+    background-color: var(--color-dark-blue);
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    color: var(--color-orange);
+    font-size: 1.125rem;
+    font-weight: 400;
+}

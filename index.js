@@ -17,11 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    submitButton.addEventListener('click', () => {
-        if (selectedNumber) {
+    submitButton.addEventListener('click', () => {        
             selectedNumberElement.textContent = selectedNumber;
             container.classList.add('hidden');
-            thankYouContainer.classList.remove('hidden');
-        }
+            thankYouContainer.classList.remove('hidden');        
     });
 });
